@@ -240,7 +240,7 @@ function prepareFile (fs, compiler, outname) {
 
   var file = new File({
     base: compiler.outputPath,
-    path: nodePath.join(compiler.outputPath, outname),
+    path: path,
     contents: contents
   });
   return file;
