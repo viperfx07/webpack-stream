@@ -121,7 +121,7 @@ module.exports = function (options, wp, done) {
       config.watch = options.watch;
       entry = [];
 
-      if (!config.entry || config.entry.length < 1) {
+      if (!config.entry || (Array.isArray(config.entry) && config.entry.length < 1)) {
         fancyLog('webpack-stream - No files given; aborting compilation');
         self.emit('end');
         return false;
